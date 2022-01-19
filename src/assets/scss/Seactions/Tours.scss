@@ -1,0 +1,224 @@
+.tours {
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .tours__content {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    h2 {
+      margin-top: 100px;
+      text-align: center;
+      color: #1e5d69;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    button {
+      width: 221px;
+      height: 57px;
+      border-radius: 24px;
+      border: none;
+      background: rgb(72, 187, 208);
+      background: linear-gradient(
+        211deg,
+        rgba(72, 187, 208, 1) 0%,
+        rgba(45, 78, 84, 1) 100%
+      );
+      color: white;
+      span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+    }
+    button:hover span {
+      padding-right: 25px;
+    }
+    button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    .choices {
+      margin-top: 50px;
+      width: 100%;
+      height: 600px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .choice {
+        width: 400px;
+        height: 100%;
+        // border: 2px solid #fdfdfd;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        cursor: pointer;
+        img {
+          width: 100%;
+          clip-path: polygon(0 0, 100% 0%, calc(100%) 80%, 0% 100%);
+        }
+        .choice__contnet {
+          height: 400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e5d69;
+          }
+          .choice__container {
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            p {
+              color: #1e5d69;
+              font-size: 14px;
+            }
+            div {
+              border: 1px solid #dfdfdf;
+              width: 200px;
+            }
+          }
+        }
+      }
+      .choice:hover {
+        background-color: #2d4e54;
+        animation: glow 1s;
+        -webkit-box-shadow: 0 0 130px #48bbd0;
+        box-shadow: 0 0 130px #48bbd0;
+        .choice__contnet {
+          h3 {
+            color: white;
+          }
+          .choice__container {
+            p {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes glow {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: #2d4e54;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .tours {
+    .tours__content {
+      .choices {
+        .choice {
+          width: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .tours {
+    .tours__content {
+      .choices {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1138px) {
+  .tours {
+    .tours__content {
+      .choices {
+        justify-content: space-between;
+        .choice {
+          width: 300px;
+          height: 88%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 981px) {
+  .tours {
+    height: 170vh;
+    .tours__content {
+      justify-content: space-between;
+      h2 {
+        margin-top: 20px;
+      }
+      .choices {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 0;
+        height: 1000px;
+        .choice {
+          margin: 0 20px 20px 20px;
+          height: 53%;
+        }
+      }
+      button {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 716px) {
+  .tours {
+    height: 200vh;
+    .tours__content {
+      .choices {
+        justify-content: space-between;
+        height: 1400px;
+        .choice {
+          height: 38%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  .tours {
+    height: 250vh;
+    .tours__content {
+      justify-content: space-evenly;
+      .choices {
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .choice {
+          height: 28%;
+        }
+      }
+    }
+  }
+}

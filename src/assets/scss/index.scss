@@ -1,0 +1,14 @@
+@import "./reset";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,400&family=Open+Sans&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(230, 230, 230);
+}
+
+@import "./Seactions/Header.scss";
+@import "./Seactions/Main.scss";
+@import "./Seactions/Travel.scss";
+@import "./Seactions/Tours.scss";
+@import "./Seactions/footer.scss";

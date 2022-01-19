@@ -1,0 +1,133 @@
+.Header {
+  width: 100%;
+  height: 86px;
+  background-color: #1e5d69;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  .Header__content {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left__side__nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      width: 215px;
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    .middle__side__nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 400px;
+      li {
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+    .right__side__nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 80px;
+      img {
+        cursor: pointer;
+      }
+      h4 {
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    }
+    .mobile__responsive {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 831px) {
+  .Header {
+    .Header__content {
+      .left__side__nav {
+        width: 190px;
+        h3 {
+          font-size: 14px;
+        }
+      }
+      .middle__side__nav {
+        width: 300px;
+        li {
+          font-size: 12px;
+        }
+      }
+      .right__side__nav {
+        h4 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 626px) {
+  .Header {
+    .Header__content {
+      .left__side__nav {
+        width: 160px;
+        h3 {
+          font-size: 12px;
+        }
+      }
+      .middle__side__nav {
+        width: 250px;
+        li {
+          font-size: 10px;
+        }
+      }
+      .right__side__nav {
+        width: 60px;
+        h4 {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  .Header {
+    .Header__content {
+      .left__side__nav {
+        width: 160px;
+        h3 {
+          font-size: 12px;
+        }
+      }
+      .middle__side__nav {
+        display: none;
+      }
+      .right__side__nav {
+        display: none;
+      }
+      .mobile__responsive {
+        display: block;
+        width: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
